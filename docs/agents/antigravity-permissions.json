@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "command(./mvnw)",
+      "command(openspec)",
+      "command(git status)",
+      "command(git diff)",
+      "command(git log)",
+      "command(git add)",
+      "command(git commit -m)"
+    ],
+    "ask": [
+      "write_file(pom.xml)",
+      "write_file(openspec/specs/)",
+      "write_file(src/test/resources/features/)",
+      "command(docker)",
+      "read_url(*)",
+      "execute_url(*)"
+    ],
+    "deny": [
+      "command(mvn)",
+      "command(git push)",
+      "command(git commit --amend)",
+      "command(git reset --hard)",
+      "command(git rebase)",
+      "command(git clean)",
+      "command(git tag)",
+      "command(regex:.*-D.*skip.*)",
+      "command(regex:.*-Dmaven\\.test\\.failure\\.ignore.*)",
+      "read_file(.env)",
+      "write_file(.env)",
+      "write_file(AGENTS.md)",
+      "write_file(openspec/config.yaml)",
+      "write_file(docs/gates/)",
+      "write_file(docs/agents/antigravity-permissions.json)",
+      "write_file(spotbugs-exclude.xml)",
+      "write_file(src/test/java/com/roigcode/app/TestcontainersConfiguration.java)",
+      "write_file(src/test/java/com/roigcode/app/architecture/)",
+      "write_file(src/test/java/com/roigcode/app/acceptance/CucumberAcceptanceTest.java)",
+      "write_file(src/test/java/com/roigcode/app/acceptance/CucumberSpringConfiguration.java)",
+      "write_file(src/test/java/com/roigcode/app/testsupport/)",
+      "write_file(.agents/)"
+    ]
+  }
+}
